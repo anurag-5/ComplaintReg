@@ -19,5 +19,17 @@
             </td>
         </tr>
     </table>
+    <h3>Previous Queries</h3>
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="qid" HeaderText="Qid" />
+            <asp:BoundField DataField="pid" HeaderText="Product Id" />
+            <asp:BoundField DataField="product_name" HeaderText="product name" />
+            <asp:BoundField DataField="uid" HeaderText="User Id" />
+            <asp:BoundField DataField="msg" HeaderText="Query" />
+            <asp:BoundField DataField="reply" HeaderText="Reply" />
+            <asp:BoundField DataField="qdate" HeaderText="Date of query" />
+        </Columns>
+        </asp:GridView>
 
 </asp:Content>

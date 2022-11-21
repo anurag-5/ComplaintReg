@@ -116,9 +116,9 @@ namespace ComplaintReg.DAL
             da.Fill(dt);
             return dt;
         }
-        public DataTable UserComplaint()
+        public DataTable UserComplaint(BAL.ComplaintBAL obj)
         {
-            string s = "SELECT Complaintbox.cid, Product.product_name, Complaintbox.Comp, Login.username, Complaintbox.Date, Complaintbox.status FROM Product CROSS JOIN Login INNER JOIN Complaintbox ON Product.product_id = Complaintbox.pid AND Login.userid = Complaintbox.uid";
+            string s = "SELECT Complaintbox.*,Product.product_name FROM Complaintbox,Product WHERE Complaintbox.uid='" + obj.id+ "' AND Product.product_id = Complaintbox.pid ";
             SqlCommand cmd = new SqlCommand(s, Getcon());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -143,5 +143,14 @@ namespace ComplaintReg.DAL
             return cmd.ExecuteNonQuery();
         }
 
+        public DataTable UserQuery(BAL.ComplaintBAL obj)
+        {
+            string s = "SELECT Query.*,Product.product_name FROM Query,Product WHERE Query.uid='" + obj.id + "' AND Product.product_id = Query.pid ";
+            SqlCommand cmd = new SqlCommand(s, Getcon());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

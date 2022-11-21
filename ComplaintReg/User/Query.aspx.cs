@@ -12,7 +12,9 @@ namespace ComplaintReg.User
         BAL.ComplaintBAL obj = new BAL.ComplaintBAL();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            obj.id = Convert.ToInt32(Session["user_id"]);
+            GridView1.DataSource = obj.UserQuery();
+            GridView1.DataBind();
 
         }
 

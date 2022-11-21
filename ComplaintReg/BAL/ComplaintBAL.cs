@@ -225,7 +225,7 @@ namespace ComplaintReg.BAL
         }
         public DataTable UserComplaint()
         {
-            return objreg.UserComplaint();
+            return objreg.UserComplaint(this);
         }
         public DataTable ViewQuery()
         {
@@ -236,8 +236,11 @@ namespace ComplaintReg.BAL
         {
             return objreg.GiveReplay(this);
         }
+        public DataTable UserQuery()
+        {
+            return objreg.UserQuery(this);
+        }
 
 
- 
     }
 }

@@ -35,8 +35,9 @@
         <Columns>
             <asp:BoundField DataField="cid" HeaderText="Cid" />
             <asp:BoundField DataField="product_name" HeaderText="product name" />
+            <asp:BoundField DataField="pid" HeaderText="product ID" />
             <asp:BoundField DataField="Comp" HeaderText="Complaint" />
-            <asp:BoundField DataField="username" HeaderText="username" />
+            <asp:BoundField DataField="uid" HeaderText="userid" />
             <asp:BoundField DataField="date" HeaderText="Date" />
             <asp:BoundField DataField="status" HeaderText="Status" />
           
