@@ -73,7 +73,7 @@ namespace ComplaintReg.DAL
         }
         public int QueryInsert(BAL.ComplaintBAL objreg)
         {
-            string qry = "insert into Query values('" + objreg.Pid + "','" + objreg.id + "','" + objreg.complaint1 + "',GETDATE())";
+            string qry = "insert into Query values('" + objreg.Pid + "','" + objreg.id + "','" + objreg.complaint1 + "','Not replied',GETDATE())";
             SqlCommand cmd = new SqlCommand(qry, Getcon());
             return cmd.ExecuteNonQuery();
         }
@@ -127,7 +127,7 @@ namespace ComplaintReg.DAL
         }
         public DataTable ViewQuery()
         {
-            string s = "SELECT Product.product_name, Query.msg, Login.username, Query.qdate FROM Product CROSS JOIN Login INNER JOIN Query ON Product.product_id = Query.pid AND Login.userid = Query.uid";
+            string s = "SELECT Query.qid,Product.product_name, Query.msg, Login.username,Query.reply, Query.qdate FROM Product CROSS JOIN Login INNER JOIN Query ON Product.product_id = Query.pid AND Login.userid = Query.uid AND Query.reply='Not replied'" ;
             SqlCommand cmd = new SqlCommand(s, Getcon());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -138,7 +138,7 @@ namespace ComplaintReg.DAL
 
         public int GiveReplay(BAL.ComplaintBAL obj)
         {
-            string s = "UPDATE Query SET replay='" + obj.Reply + "' WHERE qd='" + obj.Qid + "'";
+            string s = "UPDATE Query SET reply='" + obj.Reply + "' WHERE qid='" + obj.Qid + "'";
             SqlCommand cmd = new SqlCommand(s,Getcon());
             return cmd.ExecuteNonQuery();
         }

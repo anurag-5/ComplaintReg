@@ -15,7 +15,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <center><h4 class="auto-style1">User Login</h4></center>
+    <h2 class="auto-style1">User Login</h2>
     <center>
     <table align="center" class="auto-style2">
   
