@@ -8,7 +8,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="background-color:aqua">
+<body style="background-color:lightslategray">
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-default">

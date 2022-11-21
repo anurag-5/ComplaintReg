@@ -10,7 +10,7 @@
 </head>
 <body style="background-color:antiquewhite">
     <br />
-    <header style="background-color:white" align="center">
+    <header style="background-color:gray" align="center">
         <br /><b>
            
         <a href="Product.aspx">Product Registration</a>&nbsp

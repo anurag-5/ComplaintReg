@@ -30,7 +30,7 @@
     </table>
     <h1>Complaint List</h1>
 
-               <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="cid">
+        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="cid">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="cid" HeaderText="Cid" />
