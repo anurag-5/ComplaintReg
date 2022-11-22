@@ -30,8 +30,8 @@
     </table>
     <h1>Complaint List</h1>
 
-        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="cid">
-        <AlternatingRowStyle BackColor="White" />
+        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="2" ForeColor="Black" GridLines="None" DataKeyNames="cid" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px">
+        <AlternatingRowStyle BackColor="PaleGoldenrod" />
         <Columns>
             <asp:BoundField DataField="cid" HeaderText="Cid" />
             <asp:BoundField DataField="product_name" HeaderText="product name" />
@@ -43,16 +43,14 @@
           
            
         </Columns>
-        <EditRowStyle BackColor="#2461BF" />
-        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#EFF3FB" />
-        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+        <FooterStyle BackColor="Tan" />
+        <HeaderStyle BackColor="Tan" Font-Bold="True" />
+        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+        <SortedAscendingCellStyle BackColor="#FAFAE7" />
+        <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+        <SortedDescendingCellStyle BackColor="#E1DB9C" />
+        <SortedDescendingHeaderStyle BackColor="#C2A47B" />
 </asp:GridView>
     
     

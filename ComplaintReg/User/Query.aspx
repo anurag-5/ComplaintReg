@@ -20,7 +20,8 @@
         </tr>
     </table>
     <h3>Previous Queries</h3>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+        <AlternatingRowStyle BackColor="PaleGoldenrod" />
         <Columns>
             <asp:BoundField DataField="qid" HeaderText="Qid" />
             <asp:BoundField DataField="pid" HeaderText="Product Id" />
@@ -30,6 +31,14 @@
             <asp:BoundField DataField="reply" HeaderText="Reply" />
             <asp:BoundField DataField="qdate" HeaderText="Date of query" />
         </Columns>
+        <FooterStyle BackColor="Tan" />
+        <HeaderStyle BackColor="Tan" Font-Bold="True" />
+        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+        <SortedAscendingCellStyle BackColor="#FAFAE7" />
+        <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+        <SortedDescendingCellStyle BackColor="#E1DB9C" />
+        <SortedDescendingHeaderStyle BackColor="#C2A47B" />
         </asp:GridView>
 
 </asp:Content>
